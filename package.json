@@ -1,0 +1,13 @@
+{
+  "name": "memoryStorage",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JhonMr/memoryStorage.git"
+  },
+  "license": "MIT",
+  "main": "./src",
+  "dependencies": {
+
+  }
+}
