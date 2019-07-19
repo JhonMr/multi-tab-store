@@ -1,13 +1,20 @@
 {
-  "name": "memoryStorage",
+  "name": "multitabstorage",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:JhonMr/memoryStorage.git"
+    "url": "git@github.com:JhonMr/multitabstorage.git"
   },
   "license": "MIT",
   "main": "./src",
-  "dependencies": {
-
-  }
+  "dependencies": {},
+  "description": "同域下多页共享暂时数据，共享--多页共同维护一套数据、暂时--当所有同域页面都关闭时这套被维护的数据将消失。",
+  "bugs": {
+    "url": "https://github.com/JhonMr/multitabstorage/issues"
+  },
+  "homepage": "https://github.com/JhonMr/multitabstorage#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jhonmrli"
 }
