@@ -6,6 +6,8 @@
 
 const MemoryStorage =  class {
     constructor(){
+        if(MemoryStorage.instance) return MemoryStorage.instance;
+        MemoryStorage.instance = this;
         this._data = {};
     }
     setItem(k, v){
@@ -16,6 +18,7 @@ const MemoryStorage =  class {
         return this._data[k];
     }
     removeItem(k){
+        if(this._data[k] === undefined) return false;
         delete this._data[k];
         MemoryStorage.dataSendHandler( this._data );
     }
@@ -43,7 +46,7 @@ const MemoryStorage =  class {
         localStorage.removeItem('getMemoryStorage');
     }
 }
-const initMemoryStorage = function(){
+function initMemoryStorage(){
     var memoryStorage = new MemoryStorage();
     window.addEventListener('storage',function(e){
         if( e.newValue===null ) return false;
@@ -64,6 +67,9 @@ const initMemoryStorage = function(){
     })
     if( isEmptyObj(memoryStorage.data) ){
         MemoryStorage.dataGetHandler();
+    }
+    initMemoryStorage = function() {
+        return memoryStorage;
     }
     return memoryStorage;
 }

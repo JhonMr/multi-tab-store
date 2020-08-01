@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+    form label {
+      display: inline-block;
+      width: 70px;
+    }
+    form input {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      outline-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label>key:</label>
+    <input name="key" />
+    <br><br>
+    <label>value:</label>
+    <input name="value" />
+  </form>
+  <br>
+  <button id="add">add</button>
+  <button id="remove">remove</button>
+  <button id="clear">remove</button>
+  <script src="../lib/bundle.min.js"></script>
+  <script>
+    var memoryStorage = memory();
+    function getFormValue() {
+      var form = document.querySelector('form');
+      return {key: form.querySelector('[name="key"]').value, value: form.querySelector('[name="value"]').value};
+    }
+    document.querySelector('#add').addEventListener('click', function(){
+      var obj = getFormValue();
+      memoryStorage.setItem(obj.key, obj.value);
+    }, false);
+
+    document.querySelector('#remove').addEventListener('click', function(){
+      var obj = getFormValue();
+      memoryStorage.removeItem(obj.key);
+    }, false);
+
+    document.querySelector('#clear').addEventListener('click', function(){
+      memoryStorage.clear();
+    }, false);
+  </script>
+</body>
+</html>

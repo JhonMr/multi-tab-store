@@ -7,7 +7,14 @@
   },
   "license": "MIT",
   "main": "./src",
-  "dependencies": {
-
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "path": "^0.12.7"
   }
 }
