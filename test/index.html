@@ -27,9 +27,9 @@
   <button id="add">add</button>
   <button id="remove">remove</button>
   <button id="clear">remove</button>
-  <script src="../lib/bundle.min.js"></script>
+  <script src="../lib/multitabstorage.min.js"></script>
   <script>
-    var memoryStorage = memory();
+    var memoryStorage = multitabstorage();
     function getFormValue() {
       var form = document.querySelector('form');
       return {key: form.querySelector('[name="key"]').value, value: form.querySelector('[name="value"]').value};

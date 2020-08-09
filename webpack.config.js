@@ -6,8 +6,8 @@ module.exports = {
   },//打包入口文件名
   output:{
     path: path.resolve(__dirname, 'lib'),
-    filename:'bundle.min.js',
-    library: 'memory',
+    filename:'multitabstorage.min.js',
+    library: 'multitabstorage',
     globalObject: 'this',
     libraryExport: "default",
     libraryTarget: 'umd'
