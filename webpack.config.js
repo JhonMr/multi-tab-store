@@ -6,8 +6,8 @@ module.exports = {
   },//打包入口文件名
   output: {
     path: __dirname + '/lib/',
-    filename: 'multitabstorage.min.js',
-    library: 'multitabstorage',
+    filename: 'multi-tab-store.min.js',
+    library: 'multiTabStore',
     libraryExport: "default",
     libraryTarget: "umd"
   },

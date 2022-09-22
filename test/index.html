@@ -27,25 +27,25 @@
   <button id="add">add</button>
   <button id="remove">remove</button>
   <button id="clear">remove</button>
-  <script src="../lib/multitabstorage.min.js"></script>
+  <script src="../lib/multi-tab-store.min.js"></script>
   <script>
-    var memoryStorage = multitabstorage();
+    var store = multiTabStore();
     function getFormValue() {
       var form = document.querySelector('form');
       return {key: form.querySelector('[name="key"]').value, value: form.querySelector('[name="value"]').value};
     }
     document.querySelector('#add').addEventListener('click', function(){
       var obj = getFormValue();
-      memoryStorage.setItem(obj.key, obj.value);
+      store.setItem(obj.key, obj.value);
     }, false);
 
     document.querySelector('#remove').addEventListener('click', function(){
       var obj = getFormValue();
-      memoryStorage.removeItem(obj.key);
+      store.removeItem(obj.key);
     }, false);
 
     document.querySelector('#clear').addEventListener('click', function(){
-      memoryStorage.clear();
+      store.clear();
     }, false);
   </script>
 </body>

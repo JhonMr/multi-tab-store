@@ -3,5 +3,5 @@
 * Date: 2019/7/19
 * Description:
 */
-import memoryData from './src/memoryData'
-export default memoryData
+import multiTabShareStore from './src'
+export default multiTabShareStore;
