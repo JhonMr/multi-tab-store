@@ -3,5 +3,5 @@
 * Date: 2019/7/19
 * Description:
 */
-import memoryData from './memoryData'
+import memoryData from './src/memoryData'
 export default memoryData

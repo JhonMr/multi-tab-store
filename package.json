@@ -1,20 +1,16 @@
 {
-  "name": "memoryStorage",
-  "version": "0.0.1",
+  "name": "multitabstorage",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:JhonMr/memoryStorage.git"
   },
   "license": "MIT",
-  "main": "./src",
+  "main": "index.js",
   "scripts": {
     "build": "webpack"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
-    "path": "^0.12.7"
+    "webpack-cli": "^4.10.0"
   }
 }
